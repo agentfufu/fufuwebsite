@@ -7,9 +7,24 @@
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 		<link rel="stylesheet" href="language.css">
 		<link rel="stylesheet" href="header.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 		<script id="language_script" data-languages="en,fr,es" src="language.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function() {
+				$('#leaders').DataTable( {
+					"paging": false,
+					"autoWidth": true,
+					"searching": false,
+					"pagingType": "numbers",
+					"info": false,
+					"pageLength": 50,
+				} );
+			} );
+		</script>
 	</head>
-	<body>
+	<body style="background-color: #222; color: #fff; font-family: 'ambleregular';">
 		<div class="header">
 			<div class="header-left">
 				<a lang="en" href="index.html">Autofaucets</a>
@@ -60,12 +75,44 @@
 				<h2 lang="en" class="pcolor">Leaderboards</h2>
 				<h2 lang="fr" class="pcolor">Classements</h2>
 				<h2 lang="fr" class="pcolor">Clasificacion</h2>
-				<ol style="list-style: none" class="liststyle">
-					<li>TheFamine666 13$</li><br />
-					<li>Beth 20000Satoshis</li><br />
-					<li>MDshare 15000Satoshis</li><br />
-					<li>Belcrypto 25Digibyte</li><br />
-				</ol>
+				<table id="leaders" class="table table-striped table-bordered" style="width: 50%; margin: auto; color: #fff;">
+					<thead>
+						<tr>
+							<th>Person</th>
+							<th>Coin</th>
+							<th>Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>TheFamine666</td>
+							<td>USD</td>
+							<td>13</td>
+						</tr>
+						<tr>
+							<td>Beth</td>
+							<td>BTC</td>
+							<td>0.00020000</td>
+						</tr>
+						<tr>
+							<td>MDShare</td>
+							<td>BTC</td>
+							<td>0.00001500</td>
+						</tr>
+						<tr>
+							<td>Belcrypto</td>
+							<td>DGB</td>
+							<td>25</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>Person</th>
+							<th>Coin</th>
+							<th>Amount</th>
+						</tr>
+					</tfoot>
+				</table>
 			</div>
 			<div>
 				<!---Bitcoin Address--->
