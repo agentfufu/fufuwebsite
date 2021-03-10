@@ -8,8 +8,11 @@
          url('fonts/Amble-Regular-webfont.svg#ambleregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
-
+.pcolor 
+{
+color: #5DD145;  
 }
 a:hover
 {
