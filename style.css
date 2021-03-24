@@ -9,7 +9,10 @@
     font-weight: normal;
     font-style: normal;
 }
-
+.rcolor
+{
+  color: #9999ff
+}
 .pcolor 
 {
 color: #5DD145;  
