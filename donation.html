@@ -23,46 +23,28 @@
 				} );
 			} );
 		</script>
+		<!---Header--->
+		<div class="header" id="myHeader">
+			<div class="inner_header">
+				<div class="logo_container">
+					<h1>AGENT<span>FUFU</span></h1>
+
+				</div>
+				<ul class="navigation">
+					<a href="index.html"><li>Automatic Faucet</li></a>
+					<a href="page2.html"><li>Manual Faucet</li></a>
+					<a href="earnnano.html"><li>Earn Nano</li></a>
+					<a href="donation.html"><li>Donate</li></a>	
+				</ul>
+			</div>
+			<language class="languageFrameSelect" data-type="select"></language>
+		</div>
 	</head>
 	<body style="background-color: #222; color: #fff; font-family: 'ambleregular';">
-		<div class="header">
-			<div class="header-left">
-				<a lang="en" href="index.html">Autofaucets</a>
-				<a lang="fr" href="index.html">Faucets Auto</a>
-				<a lang="es" href="index.html">Faucets Automaticos</a>
-
-				<a lang="en"  href="page2.html">Manual Faucets</a>
-				<a lang="fr"  href="page2.html">Faucets Manuel</a>
-				<a lang="es"  href="page2.html">Faucets Manual</a>
-
-				<a lang="en" href="earnnano.html"> How to earn Nano</a>
-				<a lang="fr" href="earnnano.html"> Gagner du Nano</a>
-				<a lang="es" href="earnnano.html"> Como ganar Nano</a>
-
-				<a lang="en" class="active" href="donation.html">Donate</a>
-				<a lang="fr" class="active" href="donation.html">Donner</a>
-				<a lang="es" class="active" href="donation.html">Donar</a>
-
-				<language class="languageFrameSelect" data-type="select"></language>
-			</div>
-		</div>
-		<div class="dropdown" style="position: fixed; display:block;">
-			<button class="dropbtn">Index</button>
-			<div class="dropdown-content">
-				<a href="#bitcoin">Bitcoin</a>
-				<a href="#bitcoinln">Bitcoin (LN)</a>
-				<a href="#nano">Nano</a>
-				<a href="#doge">Doge</a>
-				<a href="#litecoin">Litecoin</a>
-				<a href="#dash">Dash</a>
-				<a href="#zcash">Zcash</a>
-				<a href="#digibyte">Digibyte</a>
-				<a href="#tron">Tron</a>
-				<a href="#ethereum">Ethereum</a>
-			</div>
-		</div>
 		<div style="text-align: center;">
 			<!--Leaderboards--->
+			<br />
+			<br />
 			<div>
 				<h1 lang="en" id="leaderboards" class="pcolor">Donation Page</h1>
 				<h1 lang="fr" id="leaderboards" class="pcolor">Page de donations</h1>
@@ -206,5 +188,19 @@
 				<a title="The Best Auto Faucet - Highest Paying" href="https://firefaucet.win/ref/agentfufu" target="_blank"><img src="https://firefaucet.win/static/images/banner2.gif" alt="Fire Faucet : The Best Auto Faucet"></a>
 			</div>
 		</div>
+		<script>
+			window.onscroll = function() {myFunction()};
+
+			var header = document.getElementById("myHeader");
+			var sticky = header.offsetTop;
+
+			function myFunction() {
+  			if (window.pageYOffset > sticky) {
+    			header.classList.add("sticky");
+  				} else {
+    			header.classList.remove("sticky");
+    			}
+				}
+		</script>
 	</body>
 </html>

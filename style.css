@@ -37,6 +37,8 @@ hr.dotted {
 /* Solid border */
 hr.solid {
   border-top: 3px solid #bbb;
+  background-color:  #5DD145;
+  height: 2px;"
 }
 
 /* Rounded border */
