@@ -27,6 +27,7 @@
 			</div>
 			<language class="languageFrameSelect" data-type="select"></language>
 		</div>
+			<button onclick="topFunction()" id="myBtn" title="Go to top">Back ↑</button>
 		<div>
 			<!---FaucetCrypto--->
 			<hr id="faucetcrypto" class="solid">
@@ -68,9 +69,9 @@
 				<p><li lang="fr">Votes et sondages pour la prochaine fonctionnalit&eacute;</li></p>
 				<p><li lang="es">Votos y encuestas para la pr&oacute;xima Caracteristica</li></p>
 
-				<p><li lang="en">20 Availables Cryptocurrencies&nbsp;&nbsp;<span class="rcolor">(BTC,ETH,BCH,BTT,DASH,DGB,DOGE,ETC,KMD,LTC,PivX,RDD,RVN,XVG,SYS,ZEC,ZEN,TRX,BSV,PIRATE)</span></li></p>
-				<p><li lang="fr">43 crypto-monnaies diff&eacute;rente!&nbsp;&nbsp;<span class="rcolor">(BTC,ETH,BCH,BTT,DASH,DGB,DOGE,ETC,KMD,LTC,PivX,RDD,RVN,XVG,SYS,ZEC,ZEN,TRX,BSV,PIRATE)</span></li></p>
-				<p><li lang="es">20 Cryptomonedas diferentes!&nbsp;&nbsp;<span class="rcolor">(BTC,ETH,BCH,BTT,DASH,DGB,DOGE,ETC,KMD,LTC,PivX,RDD,RVN,XVG,SYS,ZEC,ZEN,TRX,BSV,PIRATE)</span></li></p>
+				<p><li lang="en">20 Availables Cryptocurrencies!</li></p>
+				<p><li lang="fr">20 crypto-monnaies diff&eacute;rente!</li></p>
+				<p><li lang="es">20 Cryptomonedas diferentes!</li></p>
 
 				<p><li lang="en">LeaderBoard to compete with everyone</li></p>
 				<p><li lang="fr">Classement pour rivaliser avec tout le monde</li></p>
@@ -106,9 +107,9 @@
 				<p><li lang="fr">Vous pouvez d&eacute;penser des jetons pour louer du mat&eacute;riel pour gagner des bonus!&nbsp;&nbsp;<span class="rcolor">(De 5% &agrave; 35%)</span></li></p>
 				<p><li lang="es">¡Puedes gastar tokens para alquilar hardware y ganar bonificaciones!&nbsp;&nbsp;<span class="rcolor">(Del 5% al ​​35%)</span></li></p>
 
-				<p><li lang="en">Only 2 Coins Availables&nbsp;&nbsp;<span class="rcolor">(Bitcoin and Doge with more coming soon)</span></li></p>
-				<p><li lang="fr">Seulement 2 crypto-monnaies disponibles&nbsp;&nbsp;<span class="rcolor">(Bitcoin et Doge avec plus &agrave; venir)</span></li></p>
-				<p><li lang="es">Solo 2 Cryptomonedas disponibles&nbsp;&nbsp;<span class="rcolor">(Bitcoin and Doge, mas por venir)</span></li></p>
+				<p><li lang="en">6 Cryptos Availables&nbsp;&nbsp;<span class="rcolor">(BTC,DOGE,LTC,DASH,BCH,ADA)</span></li></p>
+				<p><li lang="fr">6 crypto-monnaies disponibles&nbsp;&nbsp;<span class="rcolor">(BTC,DOGE,LTC,DASH,BCH,ADA)</span></li></p>
+				<p><li lang="es">6 Cryptomonedas disponibles&nbsp;&nbsp;<span class="rcolor">(BTC,DOGE,LTC,DASH,BCH,ADA)</span></li></p>
 
 				<p><li lang="en">Multiple Withdraw Options&nbsp;&nbsp;<span class="rcolor">(1$ Min Withdraw,FaucetPay,ExpressCrypto and Direct Wallet)</span></li></p>
 				<p><li lang="fr">Plusieurs modes de paiement!&nbsp;&nbsp;<span class="rcolor">(Minimum 1$ FaucetPay,ExpressCrypto et Paiement direct)</span></li></p>
@@ -291,9 +292,11 @@
 				<p><li lang="fr">R&eacute;compenses de niveau,T&aacute;ches quotidiennes et classements!</li></p>
 				<p><li lang="es">Mejora de nivel, tareas diarias y tablas de clasificaci&oacute;n</strong></li></p>
 
-				<p><li lang="en">8 Differents Cryptos Availables!&nbsp;&nbsp;<span class="rcolor">(BTC,LTC,DOGE,DGB,ETH,TRX,ZEC,DASH)</span></li></p>
-				<p><li lang="fr">8 Crypto-monnaies diff&eacute;rente!&nbsp;&nbsp;<span class="rcolor">(BTC,LTC,DOGE,DGB,ETH,TRX,ZEC,DASH)</span></li></p>
-				<p><li lang="es">8 Cryptomonedas disponibles!&nbsp;&nbsp;<span class="rcolor">(BTC,LTC,DOGE,DGB,ETH,TRX,ZEC,DASH)</span></li></p>
+				<p><li lang="en">8 Differents Cryptos Availables!</li></p>
+				<p><li lang="fr">8 Crypto-monnaies diff&eacute;rente!</li></p>
+				<p><li lang="es">8 Cryptomonedas disponibles!</li></p>
+				<p class="rcolor">(BTC,LTC,DOGE,DGB,ETH,TRX,ZEC,DASH)</p>
+
 
 				<p><li lang="en">You can exchange BXT for Gift Cards across 70 Countries</li></p>
 				<p><li lang="fr">Vous pouvez échanger des BXT contre des cartes-cadeaux dans 70 pays</li></p>
@@ -375,6 +378,24 @@
   				} else {
     			header.classList.remove("sticky");
     			}
+    			//Get the button
+				var mybutton = document.getElementById("myBtn");
+
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+				  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				    mybutton.style.display = "block";
+				  } else {
+				    mybutton.style.display = "none";
+				  }
+				}
+				}
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0;
+				  document.documentElement.scrollTop = 0;
 				}
 		</script>
 	</body>

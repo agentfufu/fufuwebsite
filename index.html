@@ -27,6 +27,7 @@
 			</div>
 			<language class="languageFrameSelect" data-type="select"></language>
 		</div>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Back ↑</button>
 		<div>
 			<!--- Definitions Autofaucet --->
 			<hr id="whatsanautofaucet" class="solid">
@@ -69,9 +70,11 @@
 			<h2 lang="es" class="pcolor"><strong>Caracteristicas de FireFaucet</strong></h2>
 			<br />
 			<ul style="list-style: none" class="liststyle">
-				<p><li lang="en">Support 9 cryptocurrencies!&nbsp;&nbsp;<span class="rcolor">(USDT,ETH,BTC,DOGE,DGB,TRX,ZEC,LTC,DASH)</span></li></p>
-				<p><li lang="fr">9 crypto-monnaies diff&eacute;rente!&nbsp;&nbsp;<span class="rcolor">(USDT,ETH,BTC,DOGE,DGB,TRX,ZEC,LTC,DASH)</span></li></p>
-				<p><li lang="es">9 Cryptomonedas diferentes!&nbsp;&nbsp;<span class="rcolor">(USDT,ETH,BTC,DOGE,DGB,TRX,ZEC,LTC,DASH)</span></li></p>
+				<p><li lang="en">Support 9 cryptocurrencies !</li></p>
+				<p><li lang="fr">9 crypto-monnaies diff&eacute;rente !</li></p>
+				<p><li lang="es">9 Cryptomonedas diferentes !</li></p>
+				<p class="rcolor bold">(USDT,ETH,BTC,DOGE,DGB,TRX,ZEC,LTC,DASH)</p>
+
 
 				<p><li lang="en">Lots of ways to earn money!&nbsp;&nbsp;<span class="rcolor">(Manual Claim,AutoClaim,Level Up bonuses,Offerwalls,PTC,Shortlink and Daily Tasks)</span></li></p>
 				<p><li lang="fr">De nombreuses façons de gagner de l&lsquo;argent!&nbsp;&nbsp;<span class="rcolor">(R&eacute;clamation manuelle,R&eacute;clamation automatique,R&eacute;compenses de niveau,Offres,PTC,Shortlink et T&aacute;ches quotidiennes)</span></li></p>
@@ -274,6 +277,24 @@
   				} else {
     			header.classList.remove("sticky");
     			}
+    			//Get the button
+				var mybutton = document.getElementById("myBtn");
+
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+				  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				    mybutton.style.display = "block";
+				  } else {
+				    mybutton.style.display = "none";
+				  }
+				}
+				}
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0;
+				  document.documentElement.scrollTop = 0;
 				}
 		</script>
 	</body>
