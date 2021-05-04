@@ -177,3 +177,7 @@ h2
 #myBtn:hover {
   background-color: #9999ff;
 }
+
+.bold {
+  font-weight : bold;
+}
