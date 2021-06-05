@@ -75,18 +75,20 @@ hr.rounded {
 
 .liststyle li 
 {
+  margin: 12px;
 	font-weight : bold;
 	font-size: 1.2em
 }
 body
 {
-	background-color: #222;
+	background-color: #36394a;
 	color: #fff;
   font-family: 'ambleregular'
 }
 
 p
 {
+  margin: 12px;
 	font-size: 1.3em;
 }
 
@@ -183,4 +185,10 @@ h2
 
 .bold {
   font-weight : bold;
+}
+
+#border{
+  border: 8px solid #404040;
+  margin: 50px;
+  background-color: #282B38;
 }
