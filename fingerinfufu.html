@@ -7,6 +7,8 @@
 		<link rel="stylesheet" href="language.css">
 		<link rel="stylesheet" href="header.css">
 		<script id="language_script" data-languages="en,fr,es" src="language.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 		<meta charset="UTF-8" />
 		<title>Finger in Fufu Guild</title>
 	</head>
@@ -27,9 +29,9 @@
 			</div>
 			<language class="languageFrameSelect" data-type="select"></language>
 		</div>
-		<div id="border">
-			<div>
-				<hr class="solid">
+	<div id="border">
+		<div>
+			
 			<h2 lang="en" class="pcolor">Finger In FuFu Guild</h2>
 			<h2 lang="fr" class="pcolor">Guilde Finger In FuFu</h2>
 			<h2 lang="es" class="pcolor">Gremio Finger In Fufu</h2>
@@ -52,11 +54,78 @@
 			<p lang="en">Our Objective is to Earn more profits by investing our coins in SwissFaucet Tokens and make a Guild Pool</p>
 			<p lang="fr">Notre Objectif est de gagner plus de profit en investisant nos pieces dans les Tokens SwissFaucet et faire une pool</p>
 			<p lang="es">Nuestro Objetivo es de gagner mas gagnancias invirtiendo nuestras monedas en Tokens SwissFaucet y de hacer una pool</p>
+			<br />
+			<h2 lang="en" class="pcolor">How it work?</h2>
+			<h2 lang="fr" class="pcolor">Comment sa marche ?</h2>
+			<h2 lang="es" class="pcolor">Como Funciona ?</h2>
+			<br />
+			<p lang="en">You deposit coins into the guild bank and you will receive coins depending of the amount of tokens the guild have and how much others members deposit</p>
+			<p lang="fr">Tu deposes des piéces dans la banque de guilde et tu recevras des pieces dependans du montants de tokens que la guilde posèdes et combien les autre membres on deposée</p>
+			<p lang="es">Depositas monedas en el banco del gremio y reciberas monedas depending del numero de token que tiene el gremio y cuando otros miembros depositaron</p>
+			<br />
+			<p lang="en"><span class="rcolor">Exemple: </span>You deposited 1500 and other member 1000 coins. at the end of the week you would receive 3/5 of the total earning of the guild.</p>
+			<p lang="fr"><span class="rcolor">Exemple: </span>Tu deposer 1500 et un autre membre 1000 piéces. a la fin de la semaine tu recevrai 3/5 du gain totals de la guild.</p>
+			<p lang="es"><span class="rcolor">Ejemplo: </span>Depositas 1500 y otro miembro 1000 monedas. Al final de la semana recibirias 3/5 de las ganancias totales del gremio.</p>	
+			<br />
+			<div>
+			<h2 lang="en" class="pcolor">Members and Coins Deposited</h2>
+			<h2 lang="fr" class="pcolor">Membres et piéces deposer</h2>
+			<h2 lang="es" class="pcolor">Miembros y monedas depositadas</h2>
+			<br />
+			<h3 lang="en" class="rcolor">Number of Token We have: <span class="pcolor">3</span></h3>
+			<h3 lang="fr" class="rcolor">Numero de Token on possede: <span class="pcolor">3</span></h3>
+			<h3 lang="es" class="rcolor">Numero de Token que tenemos: <span class="pcolor">3</span></h3>
+			
+			<h3 lang="en" class="rcolor">Total Number of coins Deposited: <span class="pcolor">5500</span></h3>
+			<h3 lang="fr" class="rcolor">Numero Total de piéces Deposée: <span class="pcolor">5500</span></h3>
+			<h3 lang="es" class="rcolor">Numero Total de monedas depositadas: <span class="pcolor">5500</span></h3>
+			<br />
+			<table id="leaders" class="table table-striped table-bordered" style="width: 50%; margin: auto; color: #fff;">
+					<thead>
+						<tr>
+							<th>Username</th>
+							<th>Deposit</th>
+							<th>%</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Agentfufu</td>
+							<td>2750</td>
+							<td>50%</td>
+						</tr>
+						<tr>
+							<td>PaleWolf</td>
+							<td>2750</td>
+							<td>50%</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>Username</th>
+							<th>Amount</th>
+							<th>%</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
 		</div>
 			<br />
 			<br />
+
 			<a title="The Best Auto Faucet - Highest Paying" href="https://firefaucet.win/ref/agentfufu" target="_blank"><img src="https://firefaucet.win/static/images/banner2.gif" alt="Fire Faucet : The Best Auto Faucet"></a>
 		<script>
+			$(document).ready(function() {
+				$('#leaders').DataTable( {
+					"paging": false,
+					"autoWidth": true,
+					"searching": false,
+					"pagingType": "numbers",
+					"info": false,
+					"pageLength": 50,
+				} );
+			} );
+
 			window.onscroll = function() {myFunction()};
 
 			var header = document.getElementById("myHeader");
